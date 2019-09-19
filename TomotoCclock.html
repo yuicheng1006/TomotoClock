@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto">
+    <link rel="stylesheet" href="TomotoClock.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <!-- --------------左邊內容------------- -->
+        <div class="content">
+            <div class="text">
+                <input type="text" class="textbox" placeholder="add a new mission…" value="">
+                <i class="material-icons">add</i>
+            </div>
+            <!-- --------------要執行的任務欄------------- -->
+            <div class="tittle">
+                <p class="circle_m"></p>
+                <p class="txt">the First thing to do today</p>
+                <div class="tomatoes">
+                    <!-- <p class="circle_s" style="border-color:#003164; background-color:#003164"></p> -->
+
+                </div>
+            </div>
+            <!-- --------------倒數時間------------- -->
+            <div class="clock">
+                <span class="time min">25</span><span class="time">:</span>
+                <span class="time sec">00</span>
+            </div>
+            <!-- --------------任務列------------- -->
+            <div class=" todolist">
+                <ul class="ul">
+                    <!-- <li>
+
+                        <lebal class="ul_ontainer">
+                            <input type="checkbox">
+                            <span class=" checkmark"></span>
+                            <p>the second thing to do today</p>
+                            <i onclick="playBtn" class="material-icons">play_circle_outline</i>
+                        </lebal>
+
+
+                    </li>
+
+                    <li>
+
+                        <lebal class="ul_ontainer">
+                            <input type="checkbox">
+                            <span class=" checkmark"></span>
+                            <p>the second thing to do today</p>
+                            <i onclick="playBtn" class="material-icons">play_circle_outline</i>
+
+                        </lebal>
+
+                    </li>
+
+                    <li>
+
+                        <lebal class="ul_ontainer">
+                            <input type="checkbox">
+                            <span class=" checkmark"></span>
+                            <p>the second thing to do today</p>
+                            <i onclick="playBtn" class="material-icons">play_circle_outline</i>
+
+                        </lebal>
+
+                    </li> -->
+
+                </ul>
+                <p class="more">MORE</p>
+            </div>
+        </div>
+        <!-- --------------中間圓播放器------------- -->
+        <div class="circle_content">
+            <div class="circle_border">
+                <div class="circle">
+
+                    <i class="material-icons show">play_circle_filled_white</i>
+                    <i class="material-icons hide" value=1;>pause_circle_outline</i>
+                    <div class="square"></div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- --------------右邊內容------------- -->
+        <div class="section">
+            <ul>
+                <li><i class="material-icons">
+                        list
+                    </i></li>
+                <li><i class="material-icons">
+                        insert_chart_outlined
+                    </i></li>
+                <li><i class="material-icons">
+                        library_music
+                    </i></li>
+                <p>POMODORO</p>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+<script src="TomotoClock.js"></script>
+
+</html>
