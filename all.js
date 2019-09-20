@@ -43,7 +43,10 @@ function callTask() {
         smallPlay[i].addEventListener('click', listbtn);
 
     }
-    smallPlay[0].addEventListener('click', countDown);
+    if (getDataAry.length > 1) {
+        smallPlay[0].addEventListener('click', countDown);
+
+    }
     //-------取得我的任務列欄(刪除用)------
     var checkboxs = document.querySelectorAll('.checkboxs');
     for (var i = 0; i < checkboxs.length; i++) {
@@ -57,10 +60,16 @@ function callTask() {
 callTask(getDataAry);
 
 //--------讓第一個任務一直顯示在最上面的任務--------
-function firstTask(e) {
-    var txt = document.querySelector('.txt');
-    txt.innerHTML = getDataAry[0];
+var txt = document.querySelector('.txt');
 
+function firstTask(e) {
+    if (getDataAry == "" | []) {
+        txt.innerHTML = "THE FIRST THING TO DO TODAY";
+        //如果我的localstroage是空的的話就這字串
+    } else {
+        txt.innerHTML = getDataAry[0];
+        //如果不是就是第一個陣列的值
+    }
 }
 firstTask();
 
@@ -78,6 +87,7 @@ function addTask() {
     if (getDataAry.length >= 3) {
         moreOpen(); //如果我的陣列大於3我的more就會顯現出來
     }
+    firstTask(); //因為新增任務才有值，所以要呼叫
 }
 
 btn.addEventListener('click', addTask);
